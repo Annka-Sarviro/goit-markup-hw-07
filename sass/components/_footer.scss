@@ -1,0 +1,107 @@
+.footer {
+  background-color: var(--background-color-add);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--primary-white-color);
+  }
+}
+
+.contacts {
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  &__address {
+    color: var(--primary-white-color);
+  }
+
+  &__mail,
+  &__tel {
+    @include text(400, 14px, 1.71, 0.03em, rgba(255, 255, 255, 0.6));
+  }
+}
+
+.subscribe {
+  &__title {
+    @include text(700, 14px, 1.14, 0.03em, var(--primary-white-color));
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__icon {
+    height: 44px;
+    width: 44px;
+    @include flex-centered;
+    border-radius: 50%;
+    color: var(--primary-white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    @include transition(color);
+    @include transition(background-color);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+    }
+  }
+}
+
+.mailing {
+  &__form {
+    display: inline-block;
+    margin-right: 12px;
+    margin-top: 20px;
+  }
+
+  &__submit {
+    width: 358px;
+    height: 50px;
+    @include border(rgba(255, 255, 255, 0.3));
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 15px 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: inherit;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      background-color: #188ce8;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-white-color);
+    margin-left: 10px;
+  }
+}
