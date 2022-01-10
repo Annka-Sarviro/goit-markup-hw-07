@@ -32,6 +32,16 @@
   transition: $type 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@mixin transition-mix($type-first, $type-second) {
+  transition: $type-first 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type-second 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin transition-max-mix($type-first, $type-second, $type-third) {
+  transition: $type-first 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    $type-second 250ms cubic-bezier(0.4, 0, 0.2, 1), $type-third 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 @mixin border($color) {
   border: 1px solid $color;
 }
